@@ -45,6 +45,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\union\clientes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\union\ventas.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\ventas_enero.csv">
           <value>
             <Attribute>

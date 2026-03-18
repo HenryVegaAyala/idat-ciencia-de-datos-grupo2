@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/ordenamiento.py">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/ordenamiento.py" />
+              <option name="originalContent" value="import pandas as pd&#10;&#10;pd.set_option('display.max_rows', None)&#10;pd.set_option('display.max_columns', None)&#10;pd.set_option('display.width', None)&#10;&#10;df = pd.read_csv('compras.csv')&#10;&#10;df[&quot;fecha&quot;] = pd.to_datetime(df[&quot;fecha&quot;]) # Convertir la columna &quot;fecha&quot; a formato datetime&#10;&#10;df[&quot;sub_total&quot;] = df[&quot;precio_unitario&quot;] * df[&quot;cantidad&quot;]&#10;&#10;df = df[(df[&quot;total&quot;] &gt; 1000)]&#10;&#10;ordenamiento_metodo_pago = df.sort_values([&quot;metodo_pago&quot;, &quot;ciudad&quot;], ascending=[False, True])&#10;&#10;ordenamiento_metodo_pago[&quot;igv&quot;] = ordenamiento_metodo_pago[&quot;precio_unitario&quot;] * 0.18&#10;# print(ordenamiento_metodo_pago)&#10;&#10;# filtrado solo del mes de enero&#10;fecha_inicio = pd.to_datetime(&quot;2026-01-01&quot;)&#10;fecha_fin = pd.to_datetime(&quot;2026-01-31&quot;)&#10;&#10;# filtro_enero = ordenamiento_metodo_pago[(ordenamiento_metodo_pago[&quot;fecha&quot;] &gt;= fecha_inicio) &amp; (ordenamiento_metodo_pago[&quot;fecha&quot;] &lt;= fecha_fin)]&#10;filtro_enero = ordenamiento_metodo_pago[ordenamiento_metodo_pago[&quot;fecha&quot;].between(fecha_inicio, fecha_fin)]&#10;&#10;filtro_enero_dia_tres = filtro_enero[filtro_enero[&quot;fecha&quot;].dt.day == 3]&#10;&#10;print(filtro_enero_dia_tres)" />
+              <option name="updatedContent" value="import pandas as pd&#10;&#10;pd.set_option('display.max_rows', None)&#10;pd.set_option('display.max_columns', None)&#10;pd.set_option('display.width', None)&#10;&#10;# 1. parse_dates evita la conversión manual posterior&#10;df = pd.read_csv('compras.csv', parse_dates=[&quot;fecha&quot;])&#10;&#10;# 2. Filtrar primero y luego calcular columnas derivadas (más eficiente)&#10;df = df[df[&quot;total&quot;] &gt; 1000].copy()&#10;&#10;df[&quot;sub_total&quot;] = df[&quot;precio_unitario&quot;] * df[&quot;cantidad&quot;]&#10;df[&quot;igv&quot;] = df[&quot;precio_unitario&quot;] * 0.18&#10;&#10;# 3. Ordenar&#10;df_ordenado = df.sort_values([&quot;metodo_pago&quot;, &quot;ciudad&quot;], ascending=[False, True])&#10;&#10;# 4. Filtrar enero día 3 en un solo paso&#10;resultado = df_ordenado[&#10;    df_ordenado[&quot;fecha&quot;].between(&quot;2026-01-01&quot;, &quot;2026-01-31&quot;) &amp;&#10;    (df_ordenado[&quot;fecha&quot;].dt.day == 3)&#10;]&#10;&#10;print(resultado)" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

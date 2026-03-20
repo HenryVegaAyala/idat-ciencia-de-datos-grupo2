@@ -24,6 +24,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\machine-learning\caso-marketing\marketing.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\machine-learning\caso-recursos-humanos\marketing.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\machine-learning\caso-recursos-humanos\regresion_multiple.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

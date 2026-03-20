@@ -24,6 +24,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\machine-learning\case-banco\dato_credito.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\machine-learning\caso-clientes\clientes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\machine-learning\caso-marketing\marketing.csv">
           <value>
             <Attribute>
@@ -39,6 +53,20 @@
           </value>
         </entry>
         <entry key="\machine-learning\caso-recursos-humanos\regresion_multiple.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\machine-learning\caso-ventas\regresion_logistica.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\machine-learning\caso-ventas\regresion_multiple.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
